@@ -1,0 +1,167 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Megha's Wonderland</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #1a0000, #330000);
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1 {
+  color: white;
+  margin-top: 60px;
+  text-shadow: 2px 2px #000;
+  font-size: 2.8em;
+  text-align: center;
+}
+
+.button-container {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+
+.circle-btn {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: #ff0033;
+  color: white;
+  border: 2px solid white;
+  font-size: 1em;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 0 20px rgba(255, 0, 51, 0.5);
+  position: relative;
+}
+
+.circle-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.7);
+}
+
+.circle-btn img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+@keyframes popLeft {
+  0% {
+    transform: translateX(-100vw);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes popRight {
+  0% {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-left {
+  animation: popLeft 1s ease-out;
+}
+
+.animate-right {
+  animation: popRight 1s ease-out;
+}
+
+.fade-out {
+  animation: fadeOut 0.8s forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+  </style>
+</head><body>
+  <h1>You're Welcome to Megha's Palace!</h1>  <div class="button-container">
+    <div class="circle-btn animate-left" onclick="navigateWithSound('meet-megha.html')">
+      <img src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png" alt="Doodle" />
+      Meet Megha
+    </div><div class="circle-btn animate-right" onclick="navigateWithSound('cafeteria.html')">
+  <img src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png" alt="Cafe" />
+  Cafeteria
+</div>
+
+<div class="circle-btn animate-left" onclick="navigateWithSound('favorites.html')">
+  <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" alt="Favourites" />
+  Favourites
+</div>
+
+<div class="circle-btn animate-right" onclick="navigateWithSound('surprise.html')">
+  <img src="https://cdn-icons-png.flaticon.com/512/992/992651.png" alt="Surprise" />
+  Surprise
+</div>
+
+  </div><audio id="clickSound" src="https://cdn.pixabay.com/audio/2022/03/15/audio_f56e1257c3.mp3"></audio>
+
+  <footer id="customFooter" style="
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    background: transparent;
+    color: white;
+    font-size: 1.1em;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px #000;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeSlideUp 1.2s ease-out forwards;
+    animation-delay: 2s;
+  ">
+    Made with ❤️ by Harsh🌀
+  </footer>  <script>
+    function navigateWithSound(url) {
+      const sound = document.getElementById('clickSound');
+      sound.currentTime = 0;
+      sound.play();
+
+      document.body.classList.add('fade-out');
+
+      setTimeout(() => {
+        window.location.href = url;
+      }, 800);
+    }
+  </script></body></html>
