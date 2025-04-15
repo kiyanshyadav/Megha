@@ -77,5 +77,22 @@
       content.style.display = 'block';
       button.style.display = 'inline-block';
     }
+    <audio id="chocolateAudio" src="AUD-20250414-WA0022.mp3" preload="auto"></audio>
+<script>
+  function playAudio() {
+    const audio = document.getElementById("chocolateAudio");
+    audio.play();
+  }
+
+  function revealSurprise() {
+    const wrapper = document.getElementById("chocoWrapper");
+    wrapper.classList.add("torn");
+    setTimeout(() => {
+      wrapper.style.display = "none";
+      document.getElementById("hiddenContent").style.display = "block";
+      playAudio(); // Play the audio once wrapper is torn
+    }, 1500); // Match with animation duration
+  }
+</script>
   </script></body>
 </html>
