@@ -1,0 +1,81 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surprise</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #1a1a1a, #330000);
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }h1 {
+  font-size: 2em;
+  color: #ffcccb;
+  margin-bottom: 20px;
+}
+
+#choco-wrapper {
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+#choco-wrapper:hover {
+  transform: scale(1.05);
+}
+
+#revealed-content {
+  display: none;
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+#another-btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: #ff0033;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(255, 0, 51, 0.6);
+  display: none;
+}
+
+#another-btn:hover {
+  background: #cc0022;
+}
+
+  </style>
+</head>
+<body>
+  <h1>KHOLO WRAPPER</h1>  <div id="choco-wrapper" onclick="revealSurprise()">
+    <img src="https://i.ibb.co/Z1HzSg0L/IMG-20250415-213502.jpg" alt="Chocolate" width="250">
+  </div>  <div id="revealed-content">
+    <img src="https://i.ibb.co/SX59zJtC/IMG-20250415-213818-227.jpg" alt="Surprise Image" width="250" style="margin-top: 20px;">
+    <p style="margin-top: 10px; font-size: 1.1em; color: #ffb6c1;">DAIRY MILK MUJHSE BHI SWEET HAI KYA?🤣</p>
+    <button id="another-btn" onclick="location.href='another-surprise.html'">ANOTHER SURPRISE?</button>
+  </div>  <script>
+    function revealSurprise() {
+      const wrapper = document.getElementById('choco-wrapper');
+      const content = document.getElementById('revealed-content');
+      const button = document.getElementById('another-btn');
+
+      wrapper.style.display = 'none';
+      content.style.display = 'block';
+      button.style.display = 'inline-block';
+    }
+  </script></body>
+</html>
