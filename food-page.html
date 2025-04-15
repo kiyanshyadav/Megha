@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Khalo Cutie - Food Time</title>
+  <style>
+    body {
+      margin: 0;
+      background: radial-gradient(circle, #330000, #1a0000);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 30px;
+      text-align: center;
+      text-shadow: 0 0 10px #ff0033;
+    }
+
+    .food-images {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      width: 100%;
+      max-width: 700px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .food-images img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 0, 51, 0.4);
+      transition: transform 0.3s ease;
+    }
+
+    .food-images img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 30px rgba(255, 0, 51, 0.7);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 1em;
+      color: white;
+      opacity: 0.8;
+      font-family: 'Pacifico', cursive;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Khalo Cutie - Food Time</h1>
+
+  <div class="food-images">
+    <a href="https://imgbb.com/"><img src="https://i.ibb.co/HfFP6rCc/yangling-tibetan-restaurant.jpg" alt="yangling-tibetan-restaurant"></a>
+    <a href="https://ibb.co/Hp4f96rY"><img src="https://i.ibb.co/rf0RXYZM/IMG-20250415-202448.jpg" alt="IMG-20250415-202448"></a>
+  </div>
+
+  <footer>Made with ❤️ by Harsh🌀</footer>
+
+</body>
+</html>
